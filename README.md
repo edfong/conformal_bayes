@@ -1,6 +1,6 @@
 # Conformal Bayesian Computation
 
-This repository is the official implementation of **Conformal Bayesian Computation**. 
+This repository is the official implementation of [Conformal Bayesian Computation](https://arxiv.org/abs/2106.06137). 
 
 ## Requirements
 
