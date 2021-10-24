@@ -77,7 +77,7 @@ for example in examples:
             both_rate = np.mean(length == 2, axis = 1)
             empty_rate = np.mean(length == 0, axis = 1)
 
-            print('{} misclasification rate is {:.3f} ({:.3f})'.format(method,np.mean(misclass_rate), np.std(misclass_rate)/np.sqrt(rep)))
+            print('{} misclassification rate is {:.3f} ({:.3f})'.format(method,np.mean(misclass_rate), np.std(misclass_rate)/np.sqrt(rep)))
             print('{} both rate is {:.3f} ({:.3f})'.format(method,np.mean(both_rate), np.std(both_rate)/np.sqrt(rep)))
             print('{} empty rate is {:.3f} ({:.3f})'.format(method,np.mean(empty_rate), np.std(empty_rate)/np.sqrt(rep)))
 
