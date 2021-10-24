@@ -108,8 +108,6 @@ for example in examples:
                     print("Group {} exact coverage is {:.3f} ({:.3f})".format(example, mean,se))
             print()
 
-        for method in methods:
-            suffix = method +'_grp_' + example
             #Group length
             length_grp = np.load("results/length_{}.npy".format(suffix))
             for k in range(K):
