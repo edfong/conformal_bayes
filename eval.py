@@ -16,8 +16,10 @@ print()
 
 # Report Conformal results#
 for example in examples:
-    if example in ['hier_sim', 'hier_sim_misspec', 'hier_radon']:
+    if example in ['hier_radon']:
         methods = methods_tot[0:2]
+    elif example in ['hier_sim', 'hier_sim_misspec']:
+        methods = methods_tot[0:3]
     else:
         methods = methods_tot
 

@@ -4,13 +4,19 @@ This repository is the official implementation of [Conformal Bayesian Computatio
 
 ## Requirements
 
-To install requirements and the `conformal_bayes` package:
+To install requirements and the `conformal_bayes` package, run the following in the main folder:
 
 ```setup
 python3 setup.py install
 ```
 
-This should install all dependencies needed. We have only tested this on Python 3.7.5. We recommend creating a new virtualenv/conda environment before installing the package. 
+If the above does into work, then please run the following instead:
+
+```
+pip install .
+```
+
+This should install all dependencies needed. We have only tested this on Python 3.7.5. We recommend creating a new virtualenv/conda environment before installing the package, and using the latest verson of `setuptools` or `pip`. 
 
 We have included PyMC3 as a dependency for `conformal_bayes` for convenience, but computing conformal Bayesian intervals only requires [JAX](https://github.com/google/jax). If you pip fails to install PyMC3, please take a look at the installation instructions in the sidebar [here](https://github.com/pymc-devs/pymc3/wiki). If PyMC3 returns errors related to multiprocessing, try seting `chains = 1` in the MCMC scripts (with `_mcmc.py`).
 
