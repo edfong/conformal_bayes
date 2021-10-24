@@ -25,7 +25,7 @@ def conformal_split(y,x,x_test,alpha,y_plot,seed=100):
     y_pred_val = ls.predict(x[n_train:])
     resid = np.abs(y_pred_val - y[n_train:])
     k = int(np.ceil((n/2 + 1)*(1-alpha)))
-    d = np.sort(resid)[k]
+    d = np.sort(resid)[k-1]
     #Compute split conformal interval
     band_split = np.zeros((n_test,2))
     y_pred_test = ls.predict(x_test) #predict lasso on test

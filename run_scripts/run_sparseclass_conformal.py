@@ -26,7 +26,7 @@ def conformal_split(alpha,y,x,x_test,seed = 100):
     resid[y[n_train:]==0] =  1- resid[y[n_train:]==0]
     resid = -np.log(np.clip(resid,1e-6,1-1e-6)) #clip for numerical stability
     k = int(np.ceil((n/2 + 1)*(1-alpha)))
-    d = np.sort(resid)[k]    
+    d = np.sort(resid)[k-1]    
     
     logp_test = -np.log(np.clip(ls.predict_proba(x_test),1e-6,1-1e-6))
     region_split = logp_test <= d

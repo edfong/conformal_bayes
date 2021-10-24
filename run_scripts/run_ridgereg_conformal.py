@@ -14,7 +14,7 @@ from conformal_bayes import Bayes_MCMC_functions as bmcmc
 
 #Define baselines
 #Ridge split method
-def conformal_split(y,x,x_test,alpha,y_plot,seed=100):
+def conformal_split(y,x,x_test,alpha,seed=100):
     np.random.seed(seed)
     n = np.shape(y)[0]
     n_test = np.shape(x_test)[0]
@@ -102,7 +102,7 @@ def run_ridgereg_conformal(dataset,misspec = False):
 
         #split method
         start = time.time()
-        band_split[j] = conformal_split(y,x,x_test,alpha,y_plot,seed)
+        band_split[j] = conformal_split(y,x,x_test,alpha,seed)
         coverage_split[j] = (y_test >=band_split[j,:,0])&(y_test <=band_split[j,:,1])
         length_split[j] = np.abs(band_split[j,:,0] - band_split[j,:,1])
         end = time.time()
