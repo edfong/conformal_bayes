@@ -10,7 +10,7 @@ To install requirements and the `conformal_bayes` package, run the following in 
 python3 setup.py install
 ```
 
-If the above does into work, then please run the following instead:
+If the above does not work, then please run the following instead:
 
 ```
 pip install .
