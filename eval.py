@@ -96,7 +96,7 @@ for example in examples:
             for k in range(K):
                 mean = np.mean(coverage_grp[k])
                 se = np.std(coverage_grp[k])/np.sqrt(rep)
-                print("Group {} coverage: {:.3f} ({:.3f})".format(k,mean,se))
+                print("Group {} coverage: {:.3f} ({:.3f})".format(k+1,mean,se))
 
             # Return exact coverage if cb
             if method == 'cb':
@@ -113,6 +113,6 @@ for example in examples:
             for k in range(K):
                 mean = np.mean(length_grp[k])
                 se = np.std(length_grp[k])/np.sqrt(rep)
-                print("Group {} length: {:.2f} ({:.2f})".format(k,mean,se))
+                print("Group {} length: {:.2f} ({:.2f})".format(k+1,mean,se))
             print()
     print()
